@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block body %}
+<div class="container">
+    <h2>Update</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form|bootstrap_horizontal }}
+        <!-- Other form fields here -->
+        <button class="btn waves-effect waves-light" type="submit">Submit</button>
+    </form>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock body %}

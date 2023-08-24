@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="{% static 'assets/images/favicon.png' %}" rel="icon" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<title>Documentation</title>
+<meta name="description" content="Your ThemeForest item Name and description">
+<meta name="author" content="harnishdesign.net">
+
+<style>
+  /* Styling for the new sidebar */
+.new-sidebar {
+  width: 250px; /* Adjust the width as needed */
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.new-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.new-sidebar li {
+  margin-bottom: 10px;
+}
+
+.new-sidebar a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.new-sidebar a:hover {
+  background-color: #bee5eb;
+;
+  color: #fff;
+}
+
+
+/* Styling for zoom-out effect on breadcrumb items */
+
+  .btn:hover {
+    background-color: #2bb7c3;
+}
+a {
+        text-decoration: none; /* This removes the underline */
+    }
+</style>
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/font-awesome/css/all.min.css' %}" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/magnific-popup/magnific-popup.min.css' %}" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/highlight.js/styles/github.css' %}" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/stylesheet.css' %}" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg bg-dark navbar-text-light navbar-dropdown-dark border-0">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+		
+		<!-- Logo --> w
+        <a class="logo ml-md-3" href="/" title="iDocs Template"> <img src="{% static 'assets/images/logo-light.png' %}" alt="iDocs Template"/> </a> 
+		<span class="text-2 text-light ml-2">v1.0</span> 
+        <!-- Logo End -->
+        
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+        
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Dropdown Action</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index.html">Action</a></li>
+                    <li><a class="dropdown-item" href="feature-header-dark.html">Another Action</a></li>
+                    <li><a class="dropdown-item" href="feature-header-primary.html">Something Else Here</a></li>
+                    <li><a class="dropdown-item" href="index-2.html">Another Link</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Another Action</a>
+                <li><a class="dropdown-item" href="#">Something Else Here</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/portfolio?ref=HarnishDesign">Other Template</a></li>
+            <li><a target="_blank" href="">Dashboard</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-github"><a data-toggle="tooltip" href="https://github.com/Mohamed00Abdelmonem" target="_blank" title="" data-original-title="github"><i class="fab fa-github"></i></a></li>
+          <li class="social-icons-facebook"><a data-toggle="tooltip" href="https://www.linkedin.com/in/mohamed-abdelmonem-716ba026b/?originalSubdomain=eg" target="_blank" title="" data-original-title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+          <li class="social-icons-dribbble"><a data-toggle="Portfolio" href="https://mohamed00abdelmonem.github.io/My-Resume-/" target="_blank" title="" data-original-title="Portfolio"><i class="fab fa-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End --> 
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+  
+    
+   {% block body %}
+
+   {% endblock body%}
+
+
+ <!-- Footer -->
+  <!-- ============================ --> 
+  <footer class="bg-dark text-center text-white mt-5">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://mohamed00abdelmonem.github.io/My-Resume-/ " role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/mohamed-abdelmonem-716ba026b/?originalSubdomain=eg" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Mohamed00Abdelmonem" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-white" href="https://github.com/Mohamed00Abdelmonem">Mohamed Abdelmoenm</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script> 
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script> 
+<!-- Highlight JS -->
+<script src="{% static 'assets/vendor/highlight.js/highlight.min.js' %}"></script> 
+<!-- Easing --> 
+<script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script> 
+<!-- Magnific Popup --> 
+<script src="{% static 'assets/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script> 
+<!-- Custom Script -->
+<script src="{% static 'assets/js/theme.js' %}"></script>
+<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script> 
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script> 
+<!-- Other scripts -->
+</body>
+</html>

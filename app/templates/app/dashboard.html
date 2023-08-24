@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+    <title>Admin Dashboard</title>
+    <link rel="icon" type="image/ico" href="https://www.codesansar.com/themes/musu/assets/images/favicon.ico">
+
+    <style>
+ 
+/* .btn:hover {
+    background-color: #2bb7c3;
+} */
+        a {
+        text-decoration: none; /* This removes the underline */
+    }
+    </style>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container my-5">
+
+    <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">category</li>
+
+    </ol>
+
+
+</div>
+
+
+<div class="container mt-4">
+    <div class="row">
+        
+
+       
+        
+        <div class="col-md-9">
+            <!-- Main content area -->
+            <h2>Categorys</h2>
+                <a href="{% url 'create_category' %}"  class="btn waves-effect waves-light">Create New category</a>
+               
+                <table class="table">
+                    <!-- ... (your table content) ... -->
+                </table>
+            </div>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for category in category_list %}
+                    <tr>
+                        <td>{{category.id}}</td>
+                        <td> <a href="{% url 'dashboard_docs' category.id %}" class="btn waves-effect waves-light">{{category.name}}</a></td>
+                        <td>
+                            <a href="{% url 'update_category' category.id %}" class="btn waves-effect waves-light">Edit</a>
+                            <a href="{% url 'delete_category' category.id %}" class="btn waves-effect waves-light">Delete</a>
+                            <a href="{% url 'create_document' category.id %}" class="btn waves-effect waves-light">Create New Topic</a>
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <!-- Add more document rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock body %}

@@ -31,7 +31,7 @@ class Data_Land(models.Model):
     image = models.ImageField(null=True, blank=True, upload_to='image_land')
 
     def __str__(self) -> str:
-        return self.name
+        return self.name_saler
     
 
 

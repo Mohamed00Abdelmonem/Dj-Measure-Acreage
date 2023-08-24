@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+  
+	<!-- Sidebar Navigation
+	============================ -->
+
+  <div class="new-sidebar">
+    <ul class="nav flex-column">
+      <!-- <li class="nav-item"><a class="nav-link" href="/category/{{category.id}}/document/{{document.id}}">{{document.title}}</a></li> -->
+      <li class="nav-item"><a class="nav-link" href="/">{{document.title}}</a></li>
+      <!-- Add more links as needed -->
+    </ul>
+  </div>
+    
+
+	
+        
+
+  </div>
+
+
+ <!-- Docs Content
+    ============================ -->
+    <div class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+    ============================ -->
+        <section id="idocs_start">
+
+            <!--Breadcrumb
+            ============================ -->
+            <ol class="breadcrumb my-4">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{category.name}}</li>
+          
+            </ol>
+        
+        <h1>name</h1>
+        <!-- <h2>{{category.intro|safe}}</h2> -->
+        <p class="lead">Thank you so much for purchasing our item from themeforest.</p>
+		<hr>
+		<div class="row">
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<!-- <li><strong>Version:</strong> 1.0</li> -->
+					<li><strong>Author:</strong> <a href="http://www.harnishdesign.net" target="_blank">author</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong class="font-weight-700">Created:</strong> 3/5/2020</li>
+					<li><strong>Update:</strong> 12 May, 2020</li>
+				</ul>
+			</div>
+		</div>
+        <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please feel free to email via <a target="_blank" href="https://mail.google.com/mmohamedabdelm@gmail.com">My Email</a>.</p>
+            
+        </section>
+        
+
+        <h4>Intro For Topic </h2>
+
+					<!-- <p>{{category.intro|safe}}..</h3> -->
+				
+
+
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  {% endblock body%}

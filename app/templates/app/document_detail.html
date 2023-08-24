@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+	<!-- Sidebar Navigation
+	============================ -->
+
+
+	<div class="idocs-navigation bg-light">
+    <ul class="nav flex-column ">
+
+       
+
+
+        <li class="nav-item"><a class="nav-link active" href="#idocs_start">Decuments </a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="/">{{object.title}}</a></li>
+        </ul>
+        </li>
+
+        
+
+  </div>
+
+
+ <!-- Docs Content
+    ============================ -->
+    <div class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+    ============================ -->
+
+     <!--Breadcrumb
+            ============================ -->
+            <ol class="breadcrumb my-4">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Category</li>
+                <li class="breadcrumb-item active" aria-current="page">Decument</li>
+                <li class="breadcrumb-item active" aria-current="page">{{object.title}}</li>
+          
+            </ol>
+        <section id="idocs_start">
+        <h1>{{object.title|safe}}</h1>
+		<hr>
+		<div class="row">
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<!-- <li><strong>Version:</strong> 1.0</li> -->
+					<li><strong>Author:</strong> <a href="http://www.harnishdesign.net" target="_blank">{{object.author|safe}}</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong class="font-weight-700">Created:</strong> {{object.created_at|safe}}</li>
+					<li><strong>Update:</strong> 12 May, 2020</li>
+				</ul>
+			</div>
+		</div>
+        <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please feel free to email via <a target="_blank" href="https://mail.google.com/mmohamedabdelm@gmail.com">My Email</a>.</p>
+            
+        </section>
+        
+
+        <h4>Intro For Topic {{object.title|safe}}</h2>
+
+					<p>{{object.content|safe}}..</h3>
+				
+
+
+      </div>
+    </div>
+	
+    {% if object.video %}
+    {% if object.video.url %}
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9 rounded">
+                        <video class="embed-responsive-item" controls>
+                            <source src="{{ object.video.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <p>No video URL found.</p>
+    {% endif %}
+{% endif %}
+
+
+
+
+
+
+
+
+  </div>
+  <!-- Content end --> 
+  
+  {% endblock body%}

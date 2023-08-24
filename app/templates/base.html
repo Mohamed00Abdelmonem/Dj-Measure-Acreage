@@ -53,6 +53,101 @@
 a {
         text-decoration: none; /* This removes the underline */
     }
+
+    .navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 3rem;
+    margin-left: 90px;
+    font-size: 3.25rem;
+    color: #e8f1f1;
+    }
+
+
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #698cd7;
+            font-weight: bold;
+            color: white;
+        }
+
+        td.actions {
+            text-align: center;
+        }
+
+        
+        .edit-btn,
+        .delete-btn {
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .add-doctor-btn {
+            background-color: #667ed4;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .edit-btn {
+            background-color: #afc6eb;
+            color: #333;
+        }
+        
+
+        .delete-btn {
+            background-color: #ff9999;
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+        }
+        tbody tr:hover {
+            background-color: #909ce1;
+        }
+       
+        .go-back-btn-container {
+            text-align: right;
+            
+        }
+        .add-doctor-btn,
+        .go-back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6d83dc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .go-back-btn:hover {
+            background-color: #2857bc;
+        }
+
 </style>
 <!-- Stylesheet
 ============================== -->
@@ -94,9 +189,9 @@ a {
         <!-- Sidebar Toggler -->
 		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
 		
-		<!-- Logo --> w
-        <a class="logo ml-md-3" href="/" title="iDocs Template"> <img src="{% static 'assets/images/logo-light.png' %}" alt="iDocs Template"/> </a> 
-		<span class="text-2 text-light ml-2">v1.0</span> 
+		<!-- Logo --> 
+    <span class="navbar-brand">Mohamed Abdelmoenm</span>
+
         <!-- Logo End -->
         
 		<!-- Navbar Toggler -->

@@ -30,6 +30,10 @@ class Data_Land(models.Model):
     subtitle_information_for_land = models.TextField(null=True, blank=True, max_length=5000)
     image = models.ImageField(null=True, blank=True, upload_to='image_land')
 
+    def __str__(self) -> str:
+        return self.name
+    
+
 
 class Data_For_Author(models.Model):
    price = models.FloatField()
@@ -40,6 +44,8 @@ class Data_For_Author(models.Model):
    who_with_me = models.CharField(null=True, blank=True, max_length=20, choices=WHO_WITH_ME)
    were_this_land = models.CharField(null=True, blank=True, max_length=500)
    Land = models.ForeignKey(Data_Land, related_name='auter_land', on_delete=models.SET_NULL, null=True)
-
+   
+   def __str__(self) -> str:
+        return f"{self.price} - {self.Land}"
 
 

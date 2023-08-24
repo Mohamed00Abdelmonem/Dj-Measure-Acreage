@@ -2,24 +2,53 @@
 
 {% block body %}
 
+<style>
+  
 
+    /* Style for the row */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Style for the columns */
+    .col {
+      background-color: #e3e9e6;
+      padding: 20px;
+      font-size: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+      
+
+</style>
 
   
-	<!-- Sidebar Navigation
+<!-- Sidebar Navigation
 	============================ -->
 
-  <div class="new-sidebar">
-    <ul class="nav flex-column">
-      <!-- <li class="nav-item"><a class="nav-link" href="/category/{{category.id}}/document/{{document.id}}">{{document.title}}</a></li> -->
-      <li class="nav-item"><a class="nav-link" href="/">{{document.title}}</a></li>
-      <!-- Add more links as needed -->
-    </ul>
-  </div>
-    
 
-	
+	<div class="idocs-navigation bg-light">
+    <ul class="nav flex-column ">
+
+       
+        <li class="nav-item"><a class="nav-link active" href="#idocs_start">Details </a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="/">Name of the buyer</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">The name of the seller</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">East_meter</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">West_meter</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">North_meter</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">South_meter</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Etc .....</a></li>
+
+
+        </ul>
+        </li>
+
         
-
   </div>
 
 
@@ -28,51 +57,72 @@
     <div class="idocs-content">
       <div class="container"> 
         
-        <!-- Getting Started
-    ============================ -->
-        <section id="idocs_start">
+        <h4 class="alert alert-info" style="text-align: center; margin-top: 50px;">Welcome,  {{object.name_saler}}
+          in my wesite </h4>
 
-            <!--Breadcrumb
-            ============================ -->
-            <ol class="breadcrumb my-4">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{category.name}}</li>
-          
-            </ol>
+
+        <div class="row">
+          <div class="col-sm-6 col-lg-4">
+            <ul class="list-unstyled">
+              <li><strong>Version:</strong> 1.0</li>
+              <li><strong>Author:</strong> <a href="http://www.harnshdesign.net" target="_blank">Mohamed Abdelmoenm</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <ul class="list-unstyled">
+              <li><strong class="font-weight-700">Created:</strong> {{object.created_at}}</li>
+              <li><strong>Update:</strong> {{object.created_at}}</li>
+            </ul>
+          </div>
+        </div>
+            <p class="alert alert-info mb-5">If you have any questions that are beyond the scope of this help file, Please feel free to WhatsApp via <a target="_blank" href="https://wa.me/+201064983621">My WhatsApp</a>.</p>
+            </section>
+
+
+            <h3 style="text-align: center;">Data For This Land</h3> 
+
+
+
+            <div class="container text-center">
+              <div class="row row-cols-3">
+                <div class="col">The Name Of The Seller</div>
+                <div class="col">{{ object.name_saler }}</div>
+                <div class="col">The Name Of The Buyer</div>
+                <div class="col">{{ object.name_buyer }}</div>
+                <div class="col">East length</div>
+                <div class="col">{{ object.East_meter }}</div>
+                <div class="col">West length</div>
+                <div class="col">{{ object.West_meter }}</div>
+                <div class="col">North length</div>
+                <div class="col">{{ object.North_meter }}</div>
+                <div class="col">South length</div>
+                <div class="col">{{ object.South_meter }}</div>
+                <div class="col">Hypotenuse 1</div>
+                <div class="col">{{ object.hypotenuse1 }}</div>
+                <div class="col">Hypotenuse 2</div>
+                <div class="col">{{ object.hypotenuse2 }}</div>
+                <div class="col">East</div>
+                <div class="col">{{ object.East }}</div>
+                <div class="col">West</div>
+                <div class="col">{{ object.West }}</div>
+                <div class="col">North</div>
+                <div class="col">{{ object.North }}</div>
+                <div class="col">South</div>
+                <div class="col">{{ object.South }}</div>
+                <div class="col">Area</div>
+                <div class="col">{{ object.area }}</div>
+                <div class="col">Price </div>
+                <div class="col">{{ object.price }}</div>
+                <div class="col">Information For About This Land</div>
+                <div class="col">{{ object.subtitle_information_for_land }}</div>
+                <div class="col">Created At</div>
+                <div class="col">{{ object.created_at }}</div>
+
+              </div>
+            </div>
+
+
         
-        <h1>name</h1>
-        <!-- <h2>{{category.intro|safe}}</h2> -->
-        <p class="lead">Thank you so much for purchasing our item from themeforest.</p>
-		<hr>
-		<div class="row">
-			<div class="col-sm-6 col-lg-4">
-				<ul class="list-unstyled">
-					<!-- <li><strong>Version:</strong> 1.0</li> -->
-					<li><strong>Author:</strong> <a href="http://www.harnishdesign.net" target="_blank">author</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<ul class="list-unstyled">
-					<li><strong class="font-weight-700">Created:</strong> 3/5/2020</li>
-					<li><strong>Update:</strong> 12 May, 2020</li>
-				</ul>
-			</div>
-		</div>
-        <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please feel free to email via <a target="_blank" href="https://mail.google.com/mmohamedabdelm@gmail.com">My Email</a>.</p>
-            
-        </section>
-        
-
-        <h4>Intro For Topic </h2>
-
-					<!-- <p>{{category.intro|safe}}..</h3> -->
-				
-
-
-      </div>
-    </div>
-	
-  </div>
   <!-- Content end --> 
   
   {% endblock body%}

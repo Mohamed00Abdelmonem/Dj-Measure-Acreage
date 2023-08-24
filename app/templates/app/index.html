@@ -5,36 +5,6 @@
 
 
 
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 70px;
-    margin-top: 40px;
-  }
-
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-
-  th {
-    background-color: #8295c6;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  a {
-    color: rgb(27, 27, 27);
-    text-decoration: none;
-
-  }
-</style>
-
-
-
 
 
 <!-- Sidebar Navigation
@@ -100,11 +70,11 @@
     {% for land in objects %}
 
     <tr>
-      <td><a href="/">{{land.name_saler}}</a></td>
-      <td><a href="/">{{land.name_buyer}}</a></td>
-      <td><a href="/">{{land.area}}</a></td>
-      <td><a href="/">{{land.price}}</a></td>
-      <td><a href="/">{{land.created_at}}</a></td>
+      <td><a href="{% url 'land_detail' land.id%}">{{land.name_saler}}</a></td>
+      <td><a href="{% url 'land_detail' land.id%}">{{land.name_buyer}}</a></td>
+      <td><a href="{% url 'land_detail' land.id%}">{{land.area}}</a></td>
+      <td><a href="{% url 'land_detail' land.id%}">{{land.price}}</a></td>
+      <td><a href="{% url 'land_detail' land.id%}">{{land.created_at}}</a></td>
 
     </tr>
     {% endfor %}

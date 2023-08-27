@@ -2,7 +2,11 @@
 
 {% block body %}
 
-
+<style>
+  a{
+    color: rgb(48, 45, 45);
+  }
+</style>
 
 
 
@@ -34,8 +38,11 @@
     ============================ -->
     <div class="idocs-content">
       <div class="container"> 
-        
-        <h1>Welcome ENG. Mohamed Abdelmoenm</h1>
+       <br> 
+       <br>
+
+        <h3>Welcome, </h3> 
+           <h3>ENG. Mohamed Abdelmoenm</h1>
 
 
         <div class="row">
@@ -48,7 +55,7 @@
           <div class="col-sm-6 col-lg-4">
             <ul class="list-unstyled">
               <li><strong class="font-weight-700">Created:</strong> 18 August, 2023</li>
-              <li><strong>Update:</strong> 12 May, 2020</li>
+              <li><strong>Update:</strong> 24 August, 2023</li>
             </ul>
           </div>
         </div>
@@ -59,6 +66,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Saler</th>
       <th>Buyer</th>
       <th>Area</th>
@@ -70,6 +78,7 @@
     {% for land in objects %}
 
     <tr>
+      <td><a href="{% url 'land_detail' land.id%}">{{land.id}}</a></td>
       <td><a href="{% url 'land_detail' land.id%}">{{land.name_saler}}</a></td>
       <td><a href="{% url 'land_detail' land.id%}">{{land.name_buyer}}</a></td>
       <td><a href="{% url 'land_detail' land.id%}">{{land.area}}</a></td>
